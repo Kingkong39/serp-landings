@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5">
 <meta name="theme-color" content="#0b1d3a">
 <title>Taruhan Bola: Panduan Jenis, Istilah, dan Kalkulator Odds</title>
-<meta name="description" content="Pelajari jenis-jenis taruhan bola, istilah populer, dan cara hitung odds dengan kalkulator gratis. Panduan lengkap untuk pemula hingga menengah.">
+<meta name="description" content="Pelajari jenis-jenis taruhan bola, istilah populer, dan cara hitung odds dengan kalkulator gratis. Login atau Daftar untuk mulai.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://example.com/taruhan-bola.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Taruhan Bola: Panduan Jenis, Istilah, dan Kalkulator Odds">
-<meta property="og:description" content="Pelajari jenis-jenis taruhan bola, istilah populer, dan cara hitung odds dengan kalkulator gratis.">
+<meta property="og:description" content="Pelajari jenis-jenis taruhan bola, istilah populer, dan cara hitung odds dengan kalkulator gratis. Login atau Daftar untuk mulai.">
 <meta property="og:image" content="https://placehold.co/1000x1000/0b1d3a/ffffff/png?text=Taruhan+Bola">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="1000">
@@ -47,17 +47,28 @@ header.site-header{
   border-bottom:1px solid var(--line);
   padding-top:env(safe-area-inset-top);
 }
-.nav-wrap{display:flex; align-items:center; justify-content:space-between; height:60px; gap:12px}
+.nav-wrap{display:flex; align-items:center; justify-content:space-between; height:64px; gap:12px}
 .brand{display:flex; align-items:center; gap:10px; font-weight:800; color:var(--text); font-size:1.1rem}
 .brand svg{width:30px; height:30px}
 .nav-links{display:none; gap:18px}
 .nav-links a{color:var(--muted); font-size:.95rem}
 .nav-links a:hover{color:var(--text)}
-.cta-pill{
-  background:var(--brand); color:#111; font-weight:700;
-  padding:11px 16px; border-radius:999px; font-size:.9rem;
-  min-height:44px; display:inline-flex; align-items:center;
+.nav-cta{display:flex; align-items:center; gap:8px}
+.nav-cta .btn-login,
+.nav-cta .btn-daftar{
+  min-height:44px; padding:10px 16px; border-radius:999px;
+  font-weight:700; font-size:.88rem;
+  display:inline-flex; align-items:center; justify-content:center;
+  border:1px solid transparent; white-space:nowrap;
 }
+.nav-cta .btn-login{
+  background:transparent; color:var(--text); border-color:var(--line);
+}
+.nav-cta .btn-login:hover{border-color:var(--brand); color:var(--brand)}
+.nav-cta .btn-daftar{
+  background:var(--brand); color:#111;
+}
+.nav-cta .btn-daftar:hover{background:var(--brand-2); color:#111}
 
 .hero{padding:52px 0 36px}
 .eyebrow{
@@ -80,6 +91,20 @@ h1{
 .btn-ghost{background:transparent; color:var(--text); border-color:var(--line)}
 .hero-meta{display:flex; gap:18px; flex-wrap:wrap; margin-top:18px; color:var(--muted); font-size:.9rem}
 .hero-meta b{color:var(--text)}
+
+.hero-figure{
+  margin:26px 0 0; border-radius:14px; overflow:hidden;
+  border:1px solid var(--line); background:var(--surface);
+}
+.hero-figure img{
+  display:block; width:100%; height:auto;
+  aspect-ratio:1 / 1; object-fit:cover;
+  background:#0b1d3a;
+}
+.hero-figure figcaption{
+  padding:10px 14px; font-size:.85rem; color:var(--muted);
+  border-top:1px solid var(--line); background:var(--surface-2);
+}
 
 section{padding:38px 0; border-top:1px solid var(--line)}
 section:first-of-type{border-top:none}
@@ -184,6 +209,51 @@ tr:last-child td{border-bottom:none}
 }
 .trust b{color:var(--text)}
 
+/* CTA banner */
+.cta-banner{
+  margin-top:22px; border-radius:14px; overflow:hidden;
+  border:1px solid var(--line); background:var(--surface);
+}
+.cta-banner img{
+  display:block; width:100%; height:auto;
+  aspect-ratio:1 / 1; object-fit:cover;
+  background:#0b1d3a;
+}
+.cta-banner .cta-body{
+  padding:18px;
+}
+.cta-banner h3{margin:0 0 6px}
+.cta-banner p{margin:0 0 14px; color:var(--muted)}
+.cta-banner .cta-buttons{
+  display:flex; flex-wrap:wrap; gap:10px;
+}
+
+/* Sticky mobile bottom bar */
+.sticky-cta{
+  display:none;
+}
+@media(max-width:639px){
+  .sticky-cta{
+    display:flex; position:fixed; left:0; right:0; bottom:0;
+    z-index:60; padding:10px 12px;
+    padding-bottom:calc(10px + env(safe-area-inset-bottom));
+    background:rgba(11,29,58,.96); backdrop-filter:blur(8px);
+    border-top:1px solid var(--line);
+    gap:8px;
+  }
+  .sticky-cta a{
+    flex:1; min-height:48px; padding:12px 14px; border-radius:10px;
+    font-weight:800; font-size:.95rem;
+    display:inline-flex; align-items:center; justify-content:center;
+  }
+  .sticky-cta .sticky-login{
+    background:transparent; color:var(--text); border:1px solid var(--line);
+  }
+  .sticky-cta .sticky-daftar{
+    background:var(--brand); color:#111;
+  }
+}
+
 footer{
   border-top:1px solid var(--line); padding:34px 0 60px;
   color:var(--muted); font-size:.88rem;
@@ -210,7 +280,12 @@ footer{
       "@id":"https://example.com/#org",
       "name":"BolaPedia",
       "url":"https://example.com/",
-      "logo":{"@type":"ImageObject","url":"https://placehold.co/1000x1000/0b1d3a/ffffff/png?text=Logo","width":1000,"height":1000}
+      "logo":{
+        "@type":"ImageObject",
+        "url":"https://placehold.co/1000x1000/0b1d3a/ffffff/png?text=Logo",
+        "width":1000,
+        "height":1000
+      }
     },
     {
       "@type":"WebSite",
@@ -230,11 +305,25 @@ footer{
     },
     {
       "@type":"WebApplication",
-      "name":"Kalkulator Odds &amp; Pembayaran",
+      "name":"Kalkulator Odds & Pembayaran",
       "applicationCategory":"FinanceApplication",
       "operatingSystem":"Web",
       "offers":{"@type":"Offer","price":"0","priceCurrency":"IDR"},
       "inLanguage":"id-ID"
+    },
+    {
+      "@type":"ImageObject",
+      "url":"https://placehold.co/1000x1000/0b1d3a/ffffff/png?text=Hero+Taruhan+Bola",
+      "width":1000,
+      "height":1000,
+      "caption":"Banner hero panduan taruhan bola"
+    },
+    {
+      "@type":"ImageObject",
+      "url":"https://placehold.co/1000x1000/fbbf24/0b1d3a/png?text=Login+Daftar",
+      "width":1000,
+      "height":1000,
+      "caption":"Banner ajakan login dan daftar akun"
     },
     {
       "@type":"FAQPage",
@@ -280,7 +369,10 @@ footer{
       <a href="#cara">Cara Hitung</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="cta-pill" href="#kalkulator">Hitung Odds</a>
+    <div class="nav-cta" role="group" aria-label="Aksi akun">
+      <a class="btn-login" href="#login" aria-label="Login ke akun">Login</a>
+      <a class="btn-daftar" href="#daftar" aria-label="Daftar akun baru">Daftar</a>
+    </div>
   </div>
 </header>
 
@@ -288,18 +380,33 @@ footer{
 
 <section class="hero">
   <div class="container">
-    <span class="eyebrow">Panduan &amp; Alat</span>
+    <span class="eyebrow">Panduan & Alat</span>
     <h1>Taruhan Bola: Jenis, Istilah, dan Cara Hitung Odds</h1>
     <p class="lead">Pahami pasar taruhan bola populer — dari 1X2, handicap Asia, over/under, hingga parlay. Gunakan kalkulator odds gratis untuk hitung pembayaran dan implied probability.</p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#kalkulator">Coba Kalkulator</a>
       <a class="btn btn-ghost" href="#jenis">Lihat Jenis Pasar</a>
     </div>
+    <div class="hero-cta" style="margin-top:12px">
+      <a class="btn btn-primary" href="#login" style="min-width:140px">Login</a>
+      <a class="btn btn-ghost" href="#daftar" style="min-width:140px">Daftar Sekarang</a>
+    </div>
     <div class="hero-meta">
       <span><b>Update:</b> 24 September 2026</span>
       <span><b>Kategori:</b> Sepak Bola</span>
-      <span><b>Level:</b> Pemula &amp; Menengah</span>
+      <span><b>Level:</b> Pemula & Menengah</span>
     </div>
+
+    <figure class="hero-figure">
+      <img
+        src="https://placehold.co/1000x1000/0b1d3a/ffffff/png?text=Hero+Taruhan+Bola+1000x1000"
+        width="1000"
+        height="1000"
+        alt="Banner utama halaman panduan taruhan bola 1000x1000"
+        loading="eager"
+        decoding="async">
+      <figcaption>Banner panduan taruhan bola — format 1000×1000 piksel.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -363,7 +470,7 @@ footer{
   <div class="container">
     <h2>
       <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" role="img"><title>Kalkulator</title><path fill="currentColor" d="M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2zm2 4v2h2V7zm0 4v2h2v-2zm0 4v2h2v-2zm4-8v2h6V7zm0 4v2h6v-2zm0 4v2h6v-2z"/></svg>
-      Kalkulator Odds &amp; Pembayaran
+      Kalkulator Odds & Pembayaran
     </h2>
     <p>Hitung potensi pembayaran, profit, dan implied probability. Bisa juga untuk hitung pembayaran parlay (odds dikalikan).</p>
 
@@ -421,6 +528,28 @@ footer{
           <tr><td>10.00</td><td>Rp 100.000</td><td>Rp 1.000.000</td><td>Rp 900.000</td><td>10,0%</td></tr>
         </tbody>
       </table>
+    </div>
+  </div>
+</section>
+
+<section id="cta-banner-section">
+  <div class="container">
+    <div class="cta-banner">
+      <img
+        src="https://placehold.co/1000x1000/fbbf24/0b1d3a/png?text=Login+%26+Daftar"
+        width="1000"
+        height="1000"
+        alt="Banner ajakan login dan daftar akun taruhan bola 1000x1000"
+        loading="lazy"
+        decoding="async">
+      <div class="cta-body">
+        <h3>Siap Memasang Prediksi?</h3>
+        <p>Login ke akun Anda, atau Daftar jika belum punya. Pilih pasar, lihat odds, dan pasang stake Anda.</p>
+        <div class="cta-buttons">
+          <a class="btn btn-primary" href="#login" style="min-width:160px">Login Akun</a>
+          <a class="btn btn-ghost" href="#daftar" style="min-width:160px">Daftar Sekarang</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -516,12 +645,13 @@ footer{
         </ul>
       </div>
       <div>
-        <h4>Kontak &amp; Kebijakan</h4>
+        <h4>Kontak & Kebijakan</h4>
         <ul>
           <li>Email: redaksi@example.com</li>
+          <li><a href="#login">Login</a></li>
+          <li><a href="#daftar">Daftar</a></li>
           <li><a href="#">Kebijakan Privasi</a></li>
-          <li><a href="#">Syarat &amp; Ketentuan</a></li>
-          <li><a href="#">Disclaimer</a></li>
+          <li><a href="#">Syarat & Ketentuan</a></li>
         </ul>
       </div>
     </div>
@@ -531,6 +661,11 @@ footer{
     <p style="margin-top:18px">© 2026 BolaPedia. Semua hak dilindungi.</p>
   </div>
 </footer>
+
+<div class="sticky-cta" role="group" aria-label="Aksi cepat mobile">
+  <a class="sticky-login" href="#login">Login</a>
+  <a class="sticky-daftar" href="#daftar">Daftar</a>
+</div>
 
 <script>
 (function(){
@@ -545,20 +680,13 @@ footer{
       out.textContent = "Hasil: masukkan odds > 1.00 dan stake > 0.";
       return;
     }
-    // If parlay mode is selected and user wants second leg, we approximate by squaring odds as illustrative.
-    // Better: ask for second odds. Use a default = same odds if not provided.
     var effOdds = odds;
     if(mode === 'parlay'){
-      var second = parseFloat(document.getElementById('odds').dataset.odds2 || '0');
-      if(!isNaN(second) && second > 1){
-        effOdds = odds * second;
-      } else {
-        effOdds = odds * odds; // illustrative
-      }
+      effOdds = odds * odds; // illustrative: 2-leg parlay
     }
     var payout = stake * effOdds;
     var profit = payout - stake;
-    var imp = 1 / odds; // implied probability per leg
+    var imp = 1 / odds;
     var txt = "Payout: " + fmt(Math.round(payout))
             + " — Profit: " + fmt(Math.round(profit))
             + " — Implied Probability (per leg): " + pct(imp);
